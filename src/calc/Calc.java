@@ -65,26 +65,26 @@ public class Calc {
                 }
                     
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("+")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 + n2));
                 }
 
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("-")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 - n2));
                 }
 
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("*")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 * n2));
                 }
 
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("/")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 / n2));
                 }
                 
