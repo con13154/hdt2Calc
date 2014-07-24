@@ -19,7 +19,7 @@ public class StackVector implements Stack{
     }
 
     @Override
-    public Object pop() {
+    public Object pop(E) {
         
     }
 

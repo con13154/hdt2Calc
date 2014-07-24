@@ -1,9 +1,9 @@
-/**
- * Algoritmos y Estructura de Datos
- * Hoja de trabajo 2
- * Isa Contreras 13154 / Luis Orellana 13140/ Erick de Mata 13648
- * Calc.java
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+
 package calc;
 
 
@@ -29,7 +29,7 @@ public class Calc {
         String sCadenaSinBlancos = "";
         // TODO code application logic here
         
-        File f = new File( "C:\\Users\\E. de Mata\\Desktop\\texto.txt" );
+        File f = new File( "src/texto.txt" );
         
         BufferedReader entrada;
         
@@ -62,26 +62,26 @@ public class Calc {
                 }
                     
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("+")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 + n2));
                 }
 
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("-")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 - n2));
                 }
 
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("*")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 * n2));
                 }
 
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("/")){
-                    n1 = Double.parseDouble(miStack.pop());
                     n2 = Double.parseDouble(miStack.pop());
+                    n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 / n2));
                 }
                 
