@@ -10,7 +10,7 @@ package calc;
 /**
  *
  * @author Konoha
- */
+ *
 public class StackVector implements Stack{
 
     @Override
@@ -38,4 +38,4 @@ public class StackVector implements Stack{
         
     }
     
-}
+}*/
