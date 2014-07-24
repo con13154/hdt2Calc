@@ -1,10 +1,9 @@
-/**
- * Algoritmos y Estructura de Datos
- * Hoja de trabajo 2
- * Isa Contreras 13154 / Luis Orellana 13140/ Erick de Mata 13648
- * StackArrayListTest.java
- * 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+
 package calc;
 
 import org.junit.After;
@@ -41,7 +40,7 @@ public class StackArrayListTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
+    @Test
     public void testPeek() {
         System.out.println("JUnit Peek ArrayList");
         StackArrayList prueba = new StackArrayList();
@@ -54,7 +53,7 @@ public class StackArrayListTest {
         //fail("The test case is a prototype.");
     }
 
-
+    @Test
     public void testSize() {
         System.out.println("JUnit Tamaño ArrayList");
         StackArrayList prueba = new StackArrayList();
@@ -73,7 +72,7 @@ public class StackArrayListTest {
         //fail("The test case is a prototype.");
     }
 
-
+    @Test
     public void testEmpty() {
         System.out.println("JUnit ArrayList Vacia");
         StackArrayList instance = new StackArrayList();
