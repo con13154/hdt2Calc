@@ -1,9 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Algoritmos y Estructura de Datos
+ * Hoja de trabajo 2
+ * Isa Contreras 13154 / Luis Orellana 13140/ Erick de Mata 13648
+ * StackArrayListTest.java
+ * 
  */
-
 package calc;
 
 import org.junit.After;
@@ -35,28 +36,25 @@ public class StackArrayListTest {
         prueba.push(dato);
         dato = "A";
         prueba.push(dato);
-        Object expResult = null;
-        Object result = prueba.pop();
-        assertEquals(dato, result);
+        Object resultado = prueba.pop();
+        assertEquals(dato, resultado);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-
-
-    @Test
+    
     public void testPeek() {
         System.out.println("JUnit Peek ArrayList");
         StackArrayList prueba = new StackArrayList();
         String esperado = "1";
         prueba.push(esperado);
         //Object expResult = null;
-        Object result = prueba.peek();
-        assertEquals(esperado, result);
+        Object resultado = prueba.peek();
+        assertEquals(esperado, resultado);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
 
-    @Test
+
     public void testSize() {
         System.out.println("JUnit Tamaño ArrayList");
         StackArrayList prueba = new StackArrayList();
@@ -69,19 +67,19 @@ public class StackArrayListTest {
         prueba.push(dato);
         dato = "A";
         prueba.push(dato);
-        int result = prueba.size();
-        assertEquals(esperado, result);
+        int resultado = prueba.size();
+        assertEquals(esperado, resultado);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
 
-    @Test
+
     public void testEmpty() {
         System.out.println("JUnit ArrayList Vacia");
         StackArrayList instance = new StackArrayList();
-        boolean resultado = true;
-        boolean result = instance.empty();
-        assertEquals(resultado, result);
+        boolean esperado = true;
+        boolean resultado = instance.empty();
+        assertEquals(esperado, resultado);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }
