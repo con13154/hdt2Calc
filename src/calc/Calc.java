@@ -25,7 +25,7 @@ public class Calc {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Stack<String> miStack = new StackArrayList<String>(); 
+        Stack<String> miStack = new StackVector<String>(); 
         int numero;
         double n1;
         double n2;

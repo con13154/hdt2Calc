@@ -7,35 +7,45 @@
 
 package calc;
 
+import java.util.Vector;
+
 /**
  *
  * @author Konoha
  */
-public class StackVector implements Stack{
+public class StackVector<E> implements Stack<E>{
 
-    @Override
-    public void push(Object item) {
-        
+    protected   Vector<E> data;
+    protected   int indice   = 0;
+    
+    public StackVector()
+	// post: constructs a new, empty stack
+    {
+            data = new Vector<E>();
+    }
+    
+    public void push(E item) {
+        data.add(item);
     }
 
-    @Override
-    public Object pop() {
-        
+    public E pop() {       
+        E item = data.lastElement();
+        data.remove(data.size()-1);
+        return item;
     }
 
-    @Override
-    public Object peek() {
-        
+    
+    public E peek() {
+        return data.get(size() - 1);
     }
 
-    @Override
+    
     public boolean empty() {
-        
+        return size() == 0;
     }
 
-    @Override
     public int size() {
-        
+        return data.size();
     }
     
 }
