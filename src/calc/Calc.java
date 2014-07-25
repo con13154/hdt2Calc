@@ -1,9 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Algoritmos y Estructura de Datos
+ * Hoja de trabajo 2
+ * Isa Contreras 13154 / Luis Orellana 13140/ Erick de Mata 13648
+ *Calc.java
+ * 
  */
-
 package calc;
 
 
@@ -21,64 +22,67 @@ import java.io.IOException;
 public class Calc {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        // implementación del Stack Array List
         Stack<String> miStack = new StackArrayList<String>(); 
         int numero;
         double n1;
         double n2;
         String sCadenaSinBlancos = "";
         // TODO code application logic here
-        
+        //Detección del texto en el que se encuentra la operación
         File f = new File( "src/texto.txt" );
         
         BufferedReader entrada;
         
         try {
-            
+       
         entrada = new BufferedReader( new FileReader( f ) );
         String linea;
         
         while(entrada.ready()){
+            //Detecta lo que se encuentra en la linea leída del archivo.txt
             linea = entrada.readLine();
             System.out.println(linea);
             linea = linea.substring(0);
             System.out.println(linea);
             numero = linea.length(); 
+            //Imprime lo que detecta para verificación
             System.out.println(numero); 
-        
             for (int x=0; x < linea.length(); x++) {
                 if (linea.charAt(x) != ' '){
+                    //Guarda en una cadena la linea del calculo sin espacios
                     sCadenaSinBlancos += linea.charAt(x);
                 }
             }
-            
+            //Imprime la linea sin espacios para verificación
             System.out.println(sCadenaSinBlancos);
             
+            //Evalúa lo que se encuentra dentro de la linea sin espacios hasta que se haya completado el largo
             for(int x=0; x<sCadenaSinBlancos.length(); x++){
                 String dato =  Character.toString(sCadenaSinBlancos.charAt(x));
-                
+                //Si el caracter no es una operación se guarda el dato
                 if( (dato.equals("+") || dato.equals("-") || dato.equals("*") || dato.equals("/")) != true){
                     miStack.push(dato);
                 }
-                    
+                //Si el caracter es una suma saca de la pila los dos ultimos ingresado y realiza operacion
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("+")){
                     n2 = Double.parseDouble(miStack.pop());
                     n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 + n2));
                 }
-
+                //Si el caracter es una resta saca de la pila los dos ultimos ingresado y realiza operacion
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("-")){
                     n2 = Double.parseDouble(miStack.pop());
                     n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 - n2));
                 }
-
+                //Si el caracter es una multiplicacion saca de la pila los dos ultimos ingresado y realiza operacion
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("*")){
                     n2 = Double.parseDouble(miStack.pop());
                     n1 = Double.parseDouble(miStack.pop());
                     miStack.push(Double.toString(n1 * n2));
                 }
-
+                //Si el caracter es una division saca de la pila los dos ultimos ingresado y realiza operacion
                 if(Character.toString(sCadenaSinBlancos.charAt(x)).equals("/")){
                     n2 = Double.parseDouble(miStack.pop());
                     n1 = Double.parseDouble(miStack.pop());
@@ -86,7 +90,7 @@ public class Calc {
                 }
                 
             }
-            
+            //Impresión de resultado
             System.out.println(miStack.pop());
             
         }

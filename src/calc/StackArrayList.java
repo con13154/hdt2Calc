@@ -7,10 +7,6 @@
 
 package calc;
 
-/**
- *
- * @author Konoha
- */
 import java.util.ArrayList;
 
 public class StackArrayList<E>
@@ -19,40 +15,43 @@ public class StackArrayList<E>
 	protected ArrayList<E> data;
 
 	public StackArrayList()
-	// post: constructs a new, empty stack
+        // pre: no se necesita
+	// post: constructor de una pila
 	{
 		data = new ArrayList<E>();
 	}
 
 	public void push(E item)
-	// post: the value is added to the stack
-	//          will be popped next if no intervening push
+        // pre: no se necesita
+        // post: un nuevo dato se guarda en la pila
 	{
 		data.add(item);
 	}
 
 	public E pop()
-	// pre: stack is not empty
-	// post: most recently pushed item is removed and returned
+	 // pre: se realiza solamente si la pila tiene algun dato guardado
+         // post: se saca de la pila el último dato guardado
 	{
 		return data.remove(size()-1);
 	}
 
 	public E peek()
-	// pre: stack is not empty
-	// post: top value (next to be popped) is returned
+	// pre: se realiza solamente si la pila tiene algun dato guardado
+        // post: indica cual ue el ultimo dato guardado
 	{
 		return data.get(size() - 1);
 	}
 	
 	public int size()
-	// post: returns the number of elements in the stack
+	// pre: no se necesita
+        // post: cuenta la cantidad de datos en la pila
 	{
 		return data.size();
 	}
   
 	public boolean empty()
-	// post: returns true if and only if the stack is empty
+	// pre: no se necesita
+        // post: devuelve true si la pila esta vacia y false si tiene algun dato guardado
 	{
 		return size() == 0;
 	}

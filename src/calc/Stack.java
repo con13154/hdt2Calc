@@ -7,30 +7,28 @@
  */
 package calc;
 
-/**
- *
- * @author Konoha
- */
 public interface Stack<E> 
 {
 
    public void push(E item);
-   // pre: 
-   // post: item is added to stack
-   // will be popped next if no intervening push
+   // pre: no se necesita
+   // post: un nuevo dato se guarda en la pila
+
    
    public E pop();
-   // pre: stack is not empty
-   // post: most recently pushed item is removed and returned
+   // pre: se realiza solamente si la pila tiene algun dato guardado
+   // post: se saca de la pila el último dato guardado
    
    public E peek();
-   // pre: stack is not empty
-   // post: top value (next to be popped) is returned
+   // pre: se realiza solamente si la pila tiene algun dato guardado
+   // post: indica cual ue el ultimo dato guardado
    
    public boolean empty();
-   // post: returns true if and only if the stack is empty
+   // pre: no se necesita
+   // post: devuelve true si la pila esta vacia y false si tiene algun dato guardado
    
    public int size();
-   // post: returns the number of elements in the stack
+   // pre: no se necesita
+   // post: cuenta la cantidad de datos en la pila
 
 }
