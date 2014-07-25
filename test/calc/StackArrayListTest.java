@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Algoritmos y Estructura de Datos
+ * Hoja de trabajo 2
+ * Isa Contreras 13154 / Luis Orellana 13140/ Erick de Mata 13648
+ * StackArrayListTest.java
+ * Realiza las pruebas unitarias de 4 distintos métodos
  */
 
 package calc;
@@ -13,10 +15,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Isa
- */
+
 public class StackArrayListTest {
     
     public StackArrayListTest() {
@@ -27,6 +26,7 @@ public class StackArrayListTest {
     public void testPop() {
         System.out.println("JUnit Pop ArrayList");
         StackArrayList prueba = new StackArrayList();
+        //Ingresa 4 datos a la pila y espera que el ultimo dato ingresado sea igual al primer dato que se saca
         String dato ="J";
         prueba.push(dato);
         dato = "A";
@@ -44,6 +44,7 @@ public class StackArrayListTest {
     public void testPeek() {
         System.out.println("JUnit Peek ArrayList");
         StackArrayList prueba = new StackArrayList();
+        //Ingresa un dato y espera que el metodo peek indique que ese mismo dato se encuentra en la pila sin sacarlo
         String esperado = "1";
         prueba.push(esperado);
         //Object expResult = null;
@@ -57,6 +58,7 @@ public class StackArrayListTest {
     public void testSize() {
         System.out.println("JUnit Tamaño ArrayList");
         StackArrayList prueba = new StackArrayList();
+        //Ingresa 4 datos a la pila y espera que el metodo lo cuente y regrese el valor 4
         int esperado =4;
         String dato ="J";
         prueba.push(dato);
@@ -76,6 +78,7 @@ public class StackArrayListTest {
     public void testEmpty() {
         System.out.println("JUnit ArrayList Vacia");
         StackArrayList instance = new StackArrayList();
+        //Espera que se cumpla con la condicion que la pila este vacia y devuelva true
         boolean esperado = true;
         boolean resultado = instance.empty();
         assertEquals(esperado, resultado);
